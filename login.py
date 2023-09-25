@@ -20,3 +20,5 @@ def login_page():
 
 page = st.experimental_get_query_params().get('page', [''])[0]
 
+
+login_page()
