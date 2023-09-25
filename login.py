@@ -4,12 +4,10 @@ from das import dashboard_page
 def login_page():
     # Aquí incluirías tu lógica de autenticación
 
-    with open("styles.css", "r") as f:
-     styles = f.read()
+
 
 # Use la función `st.markdown()` para cargar el archivo CSS en su aplicación de Streamlit
 
-    st.markdown(styles, unsafe_allow_html=True)
 
     username = st.text_input('Usuario')
     password = st.text_input('Contraseña', type='password')
