@@ -20,8 +20,3 @@ def login_page():
 
 page = st.experimental_get_query_params().get('page', [''])[0]
 
-if page == 'dashboard':
-   from das import dashboard_page
-   dashboard_page()
-else:
-    login_page()
