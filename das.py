@@ -35,15 +35,8 @@ st.markdown(
 
 
 
-fl = st.file_uploader(":file_folder: Upload a file",
-                        type=(["csv", "txt", "xlsx", "xls"]))
-if fl is not None:
-    filename = fl.name
-    st.write(filename)
-    df = pd.read_excel(filename, encoding="ISO-8859-1")
-else:
-    # os.chdir(r"C:\Users\AEPAC\Desktop\Streamlit")
-    df = pd.read_excel("Sample - Superstore.xls")
+
+df = pd.read_excel("Sample - Superstore.xls")
 
 col1, col2 = st.columns((2))
 df["Order Date"] = pd.to_datetime(df["Order Date"])
